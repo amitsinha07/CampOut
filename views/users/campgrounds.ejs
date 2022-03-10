@@ -1,0 +1,173 @@
+<%- layout('layouts/boilerplate') %>
+<!-- <style>
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: #eaeaee;
+  background: linear-gradient(to right, #ffffff, #ebecec, #eaeaf0);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+
+}
+
+
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: .5em;
+}
+
+.tag-blue {
+  background: #f5f5f5;
+background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #D1913C;
+background: linear-gradient(to bottom, #FFD194, #D1913C);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.card__body h4 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+.user__image {
+  border-radius: 50%;
+}
+
+.user__info > small {
+  color: #666;
+}
+
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> -->
+<div class="text-center">
+    <h1>Campgrounds by <%= currentUser.username.slice(0,1).toUpperCase()
+        + currentUser.username.slice(1) %></h1>
+    <p><a href="/campgrounds/new">Add a New Campground</a></p>
+</div>
+<section class="row d-flex justify-content-center">
+
+    <% for (let camp of campgrounds) { %>
+      <!--<div class="card camp-card">
+        <div class="row g-0">
+        <div class="container">
+          <div class="card">
+            <div class="card__header">
+              <img class="img-fluid" alt="" src="<%= camp.images[0] ? camp.images[0].url : 'https://images.unsplash.com/photo-1468245856972-a0333f3f8293?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80' %>">
+            </div>
+            <div class="card__body">
+              <a href="/campgrounds/<%= camp._id %>"><%= camp.name %></a>
+              <%= camp.description.substring(0, 150) %>
+            </div>
+            <div class="card__footer">
+              <div class="user">
+                <div class="user__info">
+                  <small style="text-align:  left;"><%= camp.lastUpdatedString %></small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> -->
+      
+      
+        <div class="card camp-card">
+            <div class="row g-0">
+              <div class="col-md-6 card-img-left d-flex align-items-center bg-light">
+                  <img class="img-fluid" alt="" src="<%= camp.images[0] ? camp.images[0].url : 'https://images.unsplash.com/photo-1468245856972-a0333f3f8293?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80' %>">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="/campgrounds/<%= camp._id %>"><%= camp.name %></a>
+                    
+                  </h5>
+                  <p class="card-text">
+                    <small>
+                      <%= camp.description.substring(0, 150) %>
+                    </small>
+                  </p>     
+                  <p class="card-text text-muted">
+                    <%= camp.location %>
+                </p>                
+                </div>
+              </div>
+            </div>
+        </div>
+    <% } %>
+  
+  </section>
+  
