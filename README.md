@@ -1,6 +1,6 @@
 # CampOut
 
-## Live Demo: http://campoutproject.herokuapp.com/
+## Live Demo: https://camp-out-app.herokuapp.com/
 
 ## Introduction
 CampOut is a website where users can create and review campgrounds. In order to review or create a campground, you must have an account.
