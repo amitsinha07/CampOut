@@ -1,6 +1,6 @@
 # CampOut
 
-![CampOut](https://ibb.co/fM2C8LV)
+![CampOut](https://res.cloudinary.com/campout/image/upload/v1658915655/Home_vwxl3u.jpg)
 
 ## Live Demo: https://camp-out-two.herokuapp.com/
 
