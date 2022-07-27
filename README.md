@@ -1,6 +1,6 @@
 # CampOut
 
-![Memories]([https://i.ibb.co/7CmVbCW/image.png](https://drive.google.com/file/d/1xUuBQtQ1ys4tUwjBc-ieRpJtxmpArxtW/view?usp=sharing))
+![https://i.ibb.co/7CmVbCW/image.png](https://drive.google.com/file/d/1xUuBQtQ1ys4tUwjBc-ieRpJtxmpArxtW/view?usp=sharing)
 
 ## Live Demo: https://camp-out-two.herokuapp.com/
 
